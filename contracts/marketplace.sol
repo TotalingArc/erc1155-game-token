@@ -20,7 +20,7 @@ contract Marketplace {
     }
 
     function buyToken(uint256 tokenId) public payable {
-        uint256 weiAmount = msg.sender;
+        uint256 weiAmount = msg.value;
         require (weiAmount >= price[tokenId] && price[tokenId] != 0);
 
         _token.safeTransferFrom(address(this), msg.sender, tokenId, 1, "");
