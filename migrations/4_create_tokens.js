@@ -1,6 +1,8 @@
 var Token = artifacts.require("./GameToken.sol");
 var Marketplace = artifacts.require("./Marketplace.sol");
 
+
+//Module, ERC1155 
 module.exports = (deployer) => deployer
 .then( () => createToken1 ())
 .then( () => createToken2 ())
